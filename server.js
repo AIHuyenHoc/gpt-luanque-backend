@@ -1,4 +1,3 @@
-
 const express = require("express");
 const axios = require("axios");
 const cors = require("cors");
@@ -11,12 +10,12 @@ app.use(express.json());
 app.post("/api/luan-giai-que", async (req, res) => {
   const { tenQue, yNghia, binhGiai } = req.body;
 
-  const prompt = \`
-Bạn là chuyên gia Kinh Dịch. Hãy luận giải sâu sắc và có chiều sâu về quẻ "\${tenQue}".
-Ý nghĩa cổ điển: \${yNghia}
-Luận bình cơ bản: \${binhGiai}
+  const prompt = `
+Bạn là chuyên gia Kinh Dịch. Hãy luận giải sâu sắc và có chiều sâu về quẻ "${tenQue}".
+Ý nghĩa cổ điển: ${yNghia}
+Luận bình cơ bản: ${binhGiai}
 Hãy phân tích hình tượng, tượng quẻ, hào từ nếu có. Kết luận rõ ràng.
-\`;
+`;
 
   try {
     const gptRes = await axios.post(
@@ -28,7 +27,7 @@ Hãy phân tích hình tượng, tượng quẻ, hào từ nếu có. Kết lu�
       },
       {
         headers: {
-          Authorization: \`Bearer \${process.env.OPENAI_API_KEY}\`,
+          Authorization: `Bearer ${process.env.OPENAI_API_KEY}`,
           "Content-Type": "application/json",
         },
       }
@@ -43,4 +42,4 @@ Hãy phân tích hình tượng, tượng quẻ, hào từ nếu có. Kết lu�
 });
 
 const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => console.log(\`Server chạy tại http://localhost:\${PORT}\`));
+app.listen(PORT, () => console.log(`Server chạy tại http://localhost:${PORT}`));
