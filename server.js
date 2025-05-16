@@ -21,7 +21,7 @@ Hãy phân tích hình tượng, tượng quẻ, hào từ nếu có. Kết lu�
     const gptRes = await axios.post(
       "https://api.openai.com/v1/chat/completions",
       {
-        model: "gpt-4",
+        model: "gpt-3.5-turbo",
         messages: [{ role: "user", content: prompt }],
         temperature: 0.7,
       },
