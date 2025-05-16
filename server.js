@@ -4,7 +4,8 @@ const cors = require("cors");
 require("dotenv").config();
 
 const app = express();
-app.use(cors());
+const cors = require("cors");
+app.use(cors({ origin: '*' }));
 app.use(express.json());
 
 app.post("/api/luan-giai-que", async (req, res) => {
