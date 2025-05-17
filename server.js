@@ -26,7 +26,7 @@ Bạn là chuyên gia Kinh Dịch. Hãy luận giải sâu sắc và có chiều
 Luận bình cơ bản: ${binhGiai}
 Hãy phân tích hình tượng, tượng quẻ, hào từ nếu có. Kết luận rõ ràng.
 
-Sau khi trả lời, bạn hãy thêm dòng "Bạn muốn hỏi thêm gì nữa không?".
+Sau khi trả lời, bạn hãy thêm dòng "Bạn muốn hỏi thêm gì nữa không? Nếu như bạn muốn học hỏi thêm về Kinh Dịch có thể nhấp vào mục Dịch Lý của phần mềm". 
 `;
 
     gptMessages = [{ role: "user", content: prompt }];
