@@ -25,7 +25,10 @@ Bạn là chuyên gia Kinh Dịch. Hãy luận giải sâu sắc và có chiều
 Ý nghĩa cổ điển: ${yNghia}
 Luận bình cơ bản: ${binhGiai}
 Hãy phân tích hình tượng, tượng quẻ, hào từ nếu có. Kết luận rõ ràng.
+
+Sau khi trả lời, bạn hãy thêm dòng "Bạn muốn hỏi thêm gì nữa không?".
 `;
+
     gptMessages = [{ role: "user", content: prompt }];
   }
 
